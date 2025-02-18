@@ -30,9 +30,14 @@
             color: #fff;
         }
         .navbar .logo {
+            display: flex;
+            align-items: center;
             font-size: 1.5em;
             font-weight: bold;
             color: #ff6347;
+        }
+        .navbar .logo img {
+            margin-right: 10px;
         }
         .navbar .menu {
             display: flex;
@@ -61,22 +66,13 @@
             display: none;
         }
         body {
-  background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0');
-  background-size: cover; /* Ensures it covers the whole screen */
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-hr {color: #0e0c0c;}
-
-
-
-
-body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0');
+            background-size: cover; /* Ensures it covers the whole screen */
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        hr {
+            color: #0e0c0c;
         }
         header {
             background-color: #3e2723;
@@ -125,63 +121,64 @@ body {
             color: white;
             padding: 10px;
         }
-
     </style>
 </head>
 <body>
     <div class="navbar">
         <div class="logo">
-            <img src="path/to/your/logo.png" alt="Logo" style="height: 40px;">
+            <img src="logo.jpg" alt="Logo" style="height: 60px; width: 60px; border-radius: 50%;">
+            <p>SV COFFEE</p>
         </div>
         <div class="toggle" onclick="toggleMenu()">☰</div>
         <div class="menu">
-            <a href="home.html">Home </a>
-            <a href="#about" style="text-decoration: underline; color: brown;">ABOUT</a>
-            <a href="hys.html">COFFE SHOP</a>
+            <a href="#home">Home </a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
             <a href="#contact">Contact</a>
         </div>
     </div>
 
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.navbar .menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 
+    <header>
+        <h1>Welcome to SV COFFEE – The Ultimate Coffee Experience</h1>
+        <p>☕🌍 Order Now & Experience the Perfect Cup with SV COFFEE!</p>
+    </header>
 
-<header>
-    <h1>Welcome to SV COFFEE – The Ultimate Coffee Experience</h1>
-    <p>☕🌍 Order Now & Experience the Perfect Cup with SV COFFEE!</p>
-</header>
+    <section>
+        <p>At SV COFFEE, we believe that coffee is more than just a drink—it’s an experience, a ritual, and a source of energy and inspiration. Whether you're starting your morning, powering through a workday, or enjoying a relaxing evening, we ensure that a perfect cup of coffee is always within your reach.</p>
 
-<section>
-    <p>At SV COFFEE, we believe that coffee is more than just a drink—it’s an experience, a ritual, and a source of energy and inspiration. Whether you're starting your morning, powering through a workday, or enjoying a relaxing evening, we ensure that a perfect cup of coffee is always within your reach.</p>
+        <h2>☕ Why Choose SV COFFEE?</h2>
+        <ul>
+            <li><strong>🌎 Global Coffee, Local Experience</strong> - No matter where you are in the world, we bring you your favorite coffee.</li>
+            <li><strong>🌱 Premium, Ethically Sourced Coffee Beans</strong> - Our beans are ethically sourced from the best regions around the world.</li>
+            <li><strong>📋 A Wide Variety of Coffee Options</strong> - From espresso to lattes, we offer countless options.</li>
+            <li><strong>⚡ Fast, Reliable, and Convenient Delivery</strong> - Get your coffee quickly and fresh, wherever you are.</li>
+            <li><strong>💰 Affordable Prices & Exclusive Discounts</strong> - Great coffee at a great price with loyalty rewards!</li>
+            <li><strong>📲 Easy-to-Use Online Ordering Platform</strong> - Order from anywhere with ease through our website.</li>
+        </ul>
 
-    <h2>☕ Why Choose SV COFFEE?</h2>
-    <ul>
-        <li><strong>🌎 Global Coffee, Local Experience</strong> - No matter where you are in the world, we bring you your favorite coffee.</li>
-        <li><strong>🌱 Premium, Ethically Sourced Coffee Beans</strong> - Our beans are ethically sourced from the best regions around the world.</li>
-        <li><strong>📋 A Wide Variety of Coffee Options</strong> - From espresso to lattes, we offer countless options.</li>
-        <li><strong>⚡ Fast, Reliable, and Convenient Delivery</strong> - Get your coffee quickly and fresh, wherever you are.</li>
-        <li><strong>💰 Affordable Prices & Exclusive Discounts</strong> - Great coffee at a great price with loyalty rewards!</li>
-        <li><strong>📲 Easy-to-Use Online Ordering Platform</strong> - Order from anywhere with ease through our website.</li>
-    </ul>
+        <h2>🚀 How It Works</h2>
+        <ol>
+            <li>Browse the Menu – Choose from a wide selection of premium coffee options.</li>
+            <li>Customize Your Order – Add flavors, select your preferred milk, and more!</li>
+            <li>Place Your Order Securely – Our website offers a smooth and secure checkout process.</li>
+            <li>Relax & Enjoy – Sit back while we prepare and deliver your coffee fresh and hot!</li>
+        </ol>
 
-    <h2>🚀 How It Works</h2>
-    <ol>
-        <li>Browse the Menu – Choose from a wide selection of premium coffee options.</li>
-        <li>Customize Your Order – Add flavors, select your preferred milk, and more!</li>
-        <li>Place Your Order Securely – Our website offers a smooth and secure checkout process.</li>
-        <li>Relax & Enjoy – Sit back while we prepare and deliver your coffee fresh and hot!</li>
-    </ol>
+        <h3>🌟 Join the SV COFFEE Community!</h3>
+        <p>We’re more than just a coffee delivery service—we are a community of coffee enthusiasts who appreciate the art of brewing and enjoying high-quality coffee.</p>
 
-    <h3>🌟 Join the SV COFFEE Community!</h3>
-    <p>We’re more than just a coffee delivery service—we are a community of coffee enthusiasts who appreciate the art of brewing and enjoying high-quality coffee.</p>
+        <div class="cta">Order Now & Experience the Perfect Cup with SV COFFEE!</div>
+    </section>
 
-    <div class="cta">Order Now & Experience the Perfect Cup with SV COFFEE!</div>
-</section>
-
-<footer>
-    <p>Follow us on social media for updates and exclusive perks! ☕🌍</p>
-</footer>
-
-
-
-
+    <footer>
+        <p>Follow us on social media for updates and exclusive perks! ☕🌍</p>
+    </footer>
 </body>
 </html>
