@@ -34,6 +34,22 @@ html{
   background-color: darkcyan;
 }
 
+.video-container {
+    position: absolute;
+    top: 50%; /* Inilagay sa gitna */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ibaba pa ng kaunti */
+    width: 100%;
+    height: auto;
+    z-index: -1;
+  
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
  
 </style>
@@ -45,16 +61,15 @@ html{
     <!--- header --->
     <header>
         <a href="#home" class="logo" data-aos="zoom-in" data-aos-duration="1400">
-            <img src="t.webp" alt="Logo" class="logo-img"> 
-           <h3 data-aos="fade-right" data-aos-duration="1400">SV COFFE</h3> <span data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200"></span>
+            <img src="./coffe/t.webp" alt="Logo" class="logo-img"> 
+           <h3 data-aos="fade-right" data-aos-duration="1400">Steven Flores</h3> <span data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200"></span>
         </a>
 
-<ul class="navlist" data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">
-<li data-aos="fade-in" data-aos-duration="1400" data-aos-delay="600"><a href="home.html">HOME</a></li>
-<li data-aos="fade-in" data-aos-duration="1400" data-aos-delay="700"><a href="iwan.html">BUSINESS</a></li>
-<li data-aos="fade-in" data-aos-duration="1400" data-aos-delay="800" ><a href="page.html">PAGE</a></li>
-<li data-aos="fade-in" data-aos-duration="1400" data-aos-delay="900"><a href="#">ABOUT</a></li>
-</ul>
+        <ul class="navlist" data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">
+          <li data-aos="fade-in" data-aos-duration="1400" data-aos-delay="600"><a href="home.html">HOME</a></li>
+          <li data-aos="fade-in" data-aos-duration="1400" data-aos-delay="700"><a href="iwan.html">BUSINESS</a></li>
+          <li data-aos="fade-in" data-aos-duration="1400" data-aos-delay="800" ><a href="page.html">PAGE</a></li>
+          <li data-aos="fade-in" data-aos-duration="1400" data-aos-delay="900"><a href="#">ABOUT</a></li>
 
 <div class="right-content">
     <a href="#" class="nav-btn">Sign</a>
@@ -64,6 +79,14 @@ html{
     </header>
         <!--- hero --->
         <section class="hero">
+
+          <div class="video-container">
+            <video autoplay muted loop>
+                <source src="./coffe/vid.mp4  " type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
      <div class="hero-text">
 
 <h5 data-aos="fade-right" data-aos-duration="1400">#Coffe for hot days</h5>
@@ -81,13 +104,13 @@ html{
 </div>
      </div>
      <div class="hero-img" data-aos="zoom-in" data-aos-duration="1400" >
-        <img src="hero.png">
+        <img src="./coffe/hero.png">
      </div>
         </section>
 
 <div class="icons">
 <a href="#" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="600"><i class="ri-facebook-fill"></i></a>
-<a href="IG.html" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="700"><i  class='bx bxl-instagram-alt' ></i></a>
+<a href="#" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="700"><i  class='bx bxl-instagram-alt' ></i></a>
 <a href="#" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="800"><i class='bx bxl-twitch' ></i></a>
 </div>
 
@@ -100,6 +123,8 @@ html{
 <div class="main" id="section2">
     <h2></h2>
     <a href="#section1"></a>
+
+ 
   
 
  <br>  
@@ -111,10 +136,11 @@ html{
     <br>
     <br>
     <br>
+
     <div class="row">
       <div class="col-md-4">
         <div class="thumbnail" data-aos="fade-right" data-aos-duration="1400">        
-            <img src="cof.webp" alt="Lights" style="width:466px" >
+            <img src="./coffe/cof.webp" alt="Lights" style="width:466px" >
             <div class="caption">
               <button type="button" class="btn btn-info" data-toggle="modal" data-target="#cof">Buy Now</button><button type="button" class="btn btn-info">$15</button>
             </div>    
@@ -122,7 +148,7 @@ html{
       </div>
       <div class="col-md-4">
         <div class="thumbnail" data-aos="fade-right" data-aos-duration="1400">
-            <img src="cof2.jpg" alt="Nature" style="width:100%" >
+            <img src="./coffe/cof2.jpg" alt="Nature" style="width:100%" >
             <div class="caption">
               <button type="button" class="btn btn-info" data-toggle="modal" data-target="#cof2">Buy Now</button><button type="button" class="btn btn-info">$17</button>
             </div>        
@@ -130,7 +156,7 @@ html{
       </div>
       <div class="col-md-4">
         <div class="thumbnail" data-aos="fade-right" data-aos-duration="1400">
-            <img src="cof3.png" alt="Fjords" style="width:419px">
+            <img src="./coffe/cof3.png" alt="Fjords" style="width:419px">
             <div class="caption">
               <button type="button" class="btn btn-info" data-toggle="modal" data-target="#cof3">Buy Now</button><button type="button" class="btn btn-info">$50</button>
             </div>
@@ -138,6 +164,62 @@ html{
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail" data-aos="fade-right" data-aos-duration="1400">        
+          <img src="./coffe/pic4.jpg" alt="Lights" style="width:466px, height 4%;"  >
+          <div class="caption">
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#cof">Buy Now</button><button type="button" class="btn btn-info">$15</button>
+          </div>    
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail" data-aos="fade-right" data-aos-duration="1400">
+          <img src="./coffe/pic5.jpg" alt="Nature" style="width:100" >
+          <div class="caption">
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#cof2">Buy Now</button><button type="button" class="btn btn-info">$17</button>
+          </div>        
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail" data-aos="fade-right" data-aos-duration="1400">
+          <img src="./coffe/cof3.png" alt="Fjords" style="width:419px">
+          <div class="caption">
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#cof3">Buy Now</button><button type="button" class="btn btn-info">$50</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="thumbnail" data-aos="fade-right" data-aos-duration="1400">        
+        <img src="./coffe/cof.webp" alt="Lights" style="width:466px" >
+        <div class="caption">
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#cof">Buy Now</button><button type="button" class="btn btn-info">$15</button>
+        </div>    
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail" data-aos="fade-right" data-aos-duration="1400">
+        <img src="./coffe/cof2.jpg" alt="Nature" style="width:100%" >
+        <div class="caption">
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#cof2">Buy Now</button><button type="button" class="btn btn-info">$17</button>
+        </div>        
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail" data-aos="fade-right" data-aos-duration="1400">
+        <img src="./coffe/cof3.png" alt="Fjords" style="width:419px">
+        <div class="caption">
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#cof3">Buy Now</button><button type="button" class="btn btn-info">$50</button>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
 
         <!--- scrip --->
     <script src="js/script.js"></script>
