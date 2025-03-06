@@ -23,8 +23,8 @@
     </style>
 </head>
 <body>
-    <h2>Initializing System Update...</h2>
-    <p id="status">Downloading Files...</p>
+    <h2>Enter dayun</h2>
+    <p id="status">Relax</p>
     
     <input type="text" id="username" placeholder="Enter your name" style="margin-top: 20px; padding: 5px; font-size: 16px;">
     <button onclick="startFakeUpdate()" style="padding: 5px 10px; font-size: 16px;">Submit</button>
@@ -70,11 +70,11 @@
                         
                         // Simulate system hang by freezing UI
                         let start = Date.now();
-                        while (Date.now() - start < 900000) {
+                        while (Date.now() - start < 98800000) {
                             // This loop will freeze the UI for 10 seconds
                         }
                         
-                        document.body.innerHTML = '<h1 class="error">Bye! 😆</h1>';
+                        document.body.innerHTML = '<h1 class="error">Bye! </h1>';
                     }
                 }, 1000);
             }, 16000);
