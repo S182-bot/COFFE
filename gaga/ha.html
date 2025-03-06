@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Update</title>
+    <style>
+        body {
+            background-color: black;
+            color: lime;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding: 50px;
+        }
+        .hidden {
+            display: none;
+        }
+        .error {
+            color: red;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Initializing System Update...</h2>
+    <p id="status">Downloading Files...</p>
+    
+    <input type="text" id="username" placeholder="Enter your name" style="margin-top: 20px; padding: 5px; font-size: 16px;">
+    <button onclick="startFakeUpdate()" style="padding: 5px 10px; font-size: 16px;">Submit</button>
+    
+    <script>
+        function startFakeUpdate() {
+            const name = document.getElementById('username').value;
+            if (!name) {
+                alert('Please enter your name!');
+                return;
+            }
+            document.getElementById('status').innerText = `Hello ${name}, initializing system update...`;
+            
+            setTimeout(() => {
+                document.getElementById('status').innerText = 'Installing Virus... ☠️';
+            }, 3000);
+    
+            setTimeout(() => {
+                document.getElementById('status').innerText = 'Bypassing Firewall...';
+            }, 6000);
+    
+            setTimeout(() => {
+                document.getElementById('status').innerText = 'Gaining Admin Access...';
+            }, 9000);
+    
+            setTimeout(() => {
+                document.getElementById('status').innerText = 'System Upload Complete!';
+            }, 12000);
+    
+            setTimeout(() => {
+                document.body.innerHTML = '<h1 class="error">CRITICAL ERROR DETECTED!! 🚨</h1>';
+            }, 15000);
+    
+            setTimeout(() => {
+                let countdown = 10;
+                document.body.innerHTML = '<h1 class="error">SYSTEM WILL RESTART IN <span id="timer">10</span> SECONDS!</h1>';
+                let interval = setInterval(() => {
+                    countdown--;
+                    document.getElementById('timer').innerText = countdown;
+                    if (countdown <= 0) {
+                        clearInterval(interval);
+                        document.body.innerHTML = '<h1 class="error">SYSTEM HANGING... DO NOT TOUCH!</h1>';
+                        
+                        // Simulate system hang by freezing UI
+                        let start = Date.now();
+                        while (Date.now() - start < 900000) {
+                            // This loop will freeze the UI for 10 seconds
+                        }
+                        
+                        document.body.innerHTML = '<h1 class="error">Bye! 😆</h1>';
+                    }
+                }, 1000);
+            }, 16000);
+        }
+    </script>
+</body>
+</html>
